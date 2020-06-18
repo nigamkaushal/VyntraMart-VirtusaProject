@@ -1,5 +1,7 @@
-<!DOCTYPE html>
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" isELIgnored="false" %> 
+<!doctype html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
