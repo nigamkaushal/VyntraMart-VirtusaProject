@@ -37,10 +37,10 @@
 						
 						Remember Me?
 						<input
-						type="checkbox"
-						class="border-t-2 border-gray-200 w-10 text-center"
-						name="remember-me"
-						id="remember-me" />
+							type="checkbox"
+							class="border-t-2 border-gray-200 w-10 text-center"
+							name="remember-me"
+							id="remember-me" />
 						
 						<br>
 	                    <button
