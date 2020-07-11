@@ -1,7 +1,9 @@
 package com.virtusa.onlineshopping.userPackage;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepo extends JpaRepository<Users, String> {
-	Users findByEmail(String email);	
+	Optional<Users> findByEmail(String email);	
 }

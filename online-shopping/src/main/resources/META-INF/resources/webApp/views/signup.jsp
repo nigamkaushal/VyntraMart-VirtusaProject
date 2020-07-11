@@ -74,5 +74,6 @@
 	
 	<footer ng-include="'footer'">                    
 	</footer>
+	
 </body>
 </html>

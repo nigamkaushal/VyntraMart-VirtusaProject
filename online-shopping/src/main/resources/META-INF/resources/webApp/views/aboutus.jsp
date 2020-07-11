@@ -11,6 +11,7 @@
 	</script>
 </head>
 <body ng-app="">
+
 	<header ng-include="'header'">                    
 	</header>
 	
@@ -70,5 +71,6 @@
 	
 	<footer ng-include="'footer'">                    
 	</footer>
+	
 </body>
 </html>

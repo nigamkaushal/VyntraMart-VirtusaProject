@@ -10,8 +10,10 @@
 	</script>
 </head>
 <body ng-app="">
+
 	<header ng-include="'header'">                    
 	</header>
+	
 	${SPRING_SECURITY_LAST_EXCEPTION.message}
 	<section class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
 	    <div class="bg-grey-lighter min-h-screen flex flex-col">
@@ -58,5 +60,6 @@
 	
 	<footer ng-include="'footer'">                    
 	</footer>
+	
 </body>
 </html>

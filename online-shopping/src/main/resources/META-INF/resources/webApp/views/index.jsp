@@ -11,6 +11,7 @@
 	</script>
 </head>
 <body ng-app="">
+
 	<header ng-include="'header'">                    
 	</header>
 

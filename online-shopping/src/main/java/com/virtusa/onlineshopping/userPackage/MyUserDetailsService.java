@@ -1,5 +1,7 @@
 package com.virtusa.onlineshopping.userPackage;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -15,11 +17,12 @@ public class MyUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		
-		Users user = repo.findByEmail(email);
-		if(user==null)
-			throw new UsernameNotFoundException("User 404");
+		Optional<Users> user = repo.findByEmail(email);
+
+		user.orElseThrow(() -> new UsernameNotFoundException("Not Found "
+				+ email));
 		
-		return new UserPrincipal(user);
+		return user.map(UserPrincipal::new).get();
 	}
 
 }
