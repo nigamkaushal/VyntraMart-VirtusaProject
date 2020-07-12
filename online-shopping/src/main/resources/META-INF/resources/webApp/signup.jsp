@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" isELIgnored="false" %> 
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,56 +8,42 @@
 	rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js">
 	</script>
-    <style>
-    .ng-valid {
-      border-color: green;
-      outline-color: green;
-    }
-    #myform{
-			height:600px;
-	}
-  </style>
 </head>
-<body ng-app="myApp">
-	<header ng-include="'/../header'">                    
+<body ng-app="">
+	<header ng-include="'../header'">                    
 	</header>
 	
 	<section class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
 	    <div class="bg-grey-lighter min-h-screen flex flex-col">
             <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
-                <form action="../signupform" method="post" name="myForm" id="myform">
-	                <div ng-controller="myCtrl" class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
+                <form action="signupform" method="post">
+	                <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
 	                    <h1 class="mb-8 text-3xl text-center">Sign up</h1>
 	                    <input 
 	                        type="text"
 	                        class="block border border-grey-light w-full p-3 rounded mb-4"
-	                        name="fullname" ng-model="fullname"
-                               placeholder="Full Name" required/>
-	                    <span style="color:red" ng-show="myForm.fullname.$error.required">Username is required.</span>
+	                        name="fullname"
+	                        placeholder="Full Name" required/>
+	
 	                    <input 
 	                        type="text"
 	                        id="email"
 	                        class="block border border-grey-light w-full p-3 rounded mb-4"
-	                        name="email" ng-model="email"
+	                        name="email"
 	                        placeholder="Email" required/>
-	                    <span style="color:red" ng-show="myForm.email.$error.required">Email is required.</span>
+	
 	                    <input 
 	                        type="password"
 	                        id="password"
 	                        class="block border border-grey-light w-full p-3 rounded mb-4"
-	                        name="password" ng-model="password"
-	                        placeholder="Password" required ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/">
-                        <div ng-messages="myForm.userPassword.$error">
-                        <span style="color:red" ng-show="myForm.password.$error.required">Required!</span> 
-                        <span style="color:blue" ng-show="!myForm.password.$valid">Password should be at least 8 characters
-                        long and should contain one number,one character and one special character</span>
-                        </div>
-                        <br/>
+	                        name="password"
+	                        placeholder="Password" required/>
 	                    <input 
 	                        type="password"
 	                        class="block border border-grey-light w-full p-3 rounded mb-4"
-	                        name="confirmPassword" ng-model="confirmPassword"
-	                        placeholder="Confirm Password" required="" compare-to="password"/>
+	                        name="confirm_password"
+	                        placeholder="Confirm Password" required/>
+	
 	                    <button
 	                        type="submit"
 	                        name="sign"
@@ -84,37 +72,8 @@
         </div>
 	</section>
 	
-	
-	<script>
-        var app=angular.module('myApp',[]);
-        app.controller('myCtrl',function($scope)
-                       {
-                 $scope.fullname="";
-                 $scope.email="";
-            $scope.password="";
-            $scope.confirmPassword="";
-                 
-    });
-         app.directive("compareTo", function() {
-      return {
-        require: "ngModel",
-        scope: {
-          confirmPassword: "=compareTo"
-        },
-        link: function(scope, element, attributes, modelVal) {
-
-          modelVal.$validators.compareTo = function(val) {
-            return val == scope.confirmPassword;
-          };
-
-          scope.$watch("confirmPassword", function() {
-            modelVal.$validate();
-          });
-        }
-      };
-    });
-    </script>
-    <footer ng-include="'/../footer'">                    
+	<footer ng-include="'../footer'">                    
 	</footer>
+	
 </body>
 </html>

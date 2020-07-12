@@ -11,7 +11,7 @@
 </head>
 <body ng-app="">
 
-	<header ng-include="'header'">                    
+	<header ng-include="'../header'">                    
 	</header>
 	
 	${SPRING_SECURITY_LAST_EXCEPTION.message}
@@ -67,7 +67,7 @@
         </div>
 	</section>
 	
-	<footer ng-include="'footer'">                    
+	<footer ng-include="'../footer'">                    
 	</footer>
 	
 </body>

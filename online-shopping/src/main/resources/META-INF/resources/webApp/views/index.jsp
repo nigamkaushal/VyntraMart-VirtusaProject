@@ -12,15 +12,15 @@
 </head>
 <body ng-app="">
 
-	<header ng-include="'header'">                    
+	<header ng-include="'../header'">                    
 	</header>
 
 	<section class="text-gray-700 body-font">
 	  <div class="container px-5 py-24 mx-auto">
 	    <div class="flex flex-wrap -m-4">
 	      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-	        <a class="block relative h-48 rounded overflow-hidden">
-	          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/420x260/?tshirt">
+	        <a class="block relative h-48 rounded overflow-hidden" href="../product/prod1">
+	          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../images/prod1_small.jpg">
 	        </a>
 	        <div class="mt-4">
 	          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -29,8 +29,8 @@
 	        </div>
 	      </div>
 	      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-	        <a class="block relative h-48 rounded overflow-hidden">
-	          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/421x261/?jeans">
+	        <a class="block relative h-48 rounded overflow-hidden" href="../product/prod2">
+	          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../images/prod2_small.jpg">
 	        </a>
 	        <div class="mt-4">
 	          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -39,8 +39,8 @@
 	        </div>
 	      </div>
 	      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-	        <a class="block relative h-48 rounded overflow-hidden">
-	          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/422x262/?shoes">
+	        <a class="block relative h-48 rounded overflow-hidden" href="../product/prod3">
+	          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../images/prod3_small.jpg">
 	        </a>
 	        <div class="mt-4">
 	          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -49,8 +49,8 @@
 	        </div>
 	      </div>
 	      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-	        <a class="block relative h-48 rounded overflow-hidden">
-	          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://source.unsplash.com/420x260/?Suit">
+	        <a class="block relative h-48 rounded overflow-hidden" href="../product/prod4">
+	          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="../images/prod4_small.jpg">
 	        </a>
 	        <div class="mt-4">
 	          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
@@ -63,7 +63,7 @@
 	  </div>
 	</section>
 	
-	<footer ng-include="'footer'">                    
+	<footer ng-include="'../footer'">                    
 	</footer>
 	
 </body>
