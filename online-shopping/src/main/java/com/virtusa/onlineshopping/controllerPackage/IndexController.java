@@ -15,7 +15,7 @@ public class IndexController {
 	
 	@RequestMapping(value = {"", "home"})
 	public ModelAndView home() {
-		return new ModelAndView("index","data",proService.getAllProducts());
+		return new ModelAndView("index_new","data",proService.getAllProducts());
 	}
 	
 }

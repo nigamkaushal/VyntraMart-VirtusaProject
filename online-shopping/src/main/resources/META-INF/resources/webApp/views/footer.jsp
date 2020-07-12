@@ -19,7 +19,7 @@
 	            <a class="text-gray-600 hover:text-gray-800" href="aboutus">About Us</a>
 	          </li>
 	          <li>
-	            <a class="text-gray-600 hover:text-gray-800">Cart</a>
+	            <a class="text-gray-600 hover:text-gray-800" href="../cart">Cart</a>
 	          </li>
 	          <li>
 	            <a class="text-gray-600 hover:text-gray-800">Third Link</a>

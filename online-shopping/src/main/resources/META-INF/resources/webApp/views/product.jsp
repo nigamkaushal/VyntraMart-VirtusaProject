@@ -88,7 +88,7 @@
 	        </div>
 	        <div class="flex">
 	          <span class="title-font font-medium text-2xl text-gray-900">&#8377; ${data.product_price}</span>
-	          <button class="flex ml-auto text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded">Add to Cart</button>
+	          <a href="../cart" class="flex ml-auto text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded">Add to Cart</a>
 	        </div>
 	      </div>
 	    </div>
