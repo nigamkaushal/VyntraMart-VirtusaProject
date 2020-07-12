@@ -4,10 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+import com.virtusa.onlineshopping.cartPackage.CartRepo;
 import com.virtusa.onlineshopping.productPackage.productRepo;
 import com.virtusa.onlineshopping.userPackage.UserRepo;
 
-@EnableJpaRepositories(basePackageClasses = {UserRepo.class, productRepo.class})
+@EnableJpaRepositories(basePackageClasses = {UserRepo.class, productRepo.class, CartRepo.class})
 @SpringBootApplication
 public class OnlineShoppingApplication {
 
