@@ -2,53 +2,67 @@ package com.virtusa.onlineshopping.cartPackage;
 
 import java.io.Serializable;
 
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.IdClass;
+import javax.persistence.Table;
 
 @Entity
-@IdClass(CartId.class)
+@Table(name="cart")
 public class Cart implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	private String customer_email;
-	
-	@Id
-	private String product_id;
-	
+	@EmbeddedId
+	private cartId cartid;
+
 	public Cart() {}
 
-	public Cart(String customer_email, String product_id) {
+	public Cart(cartId cartid) {
 		super();
-		this.customer_email = customer_email;
-		this.product_id = product_id;
+		this.cartid = cartid;
 	}
 
-	public String getCust_email() {
-		return customer_email;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((cartid == null) ? 0 : cartid.hashCode());
+		return result;
 	}
 
-	public void setCust_email(String cust_email) {
-		this.customer_email = cust_email;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Cart other = (Cart) obj;
+		if (cartid == null) {
+			if (other.cartid != null)
+				return false;
+		} else if (!cartid.equals(other.cartid))
+			return false;
+		return true;
 	}
 
-	public String getProduct_id() {
-		return product_id;
+	public cartId getCartid() {
+		return cartid;
 	}
 
-	public void setProduct_id(String product_id) {
-		this.product_id = product_id;
+	public void setCartid(cartId cartid) {
+		this.cartid = cartid;
 	}
 
 	@Override
 	public String toString() {
-		return "Cart [cust_email=" + customer_email + ", product_id=" + product_id + "]";
+		return "Cart [Customer_Email=" + cartid.getCustomer_Email() + ","
+				+ "Product_id=" + cartid.getProduct_Id() + "]";
 	}
+	
+	
+	
 	
 	
 }

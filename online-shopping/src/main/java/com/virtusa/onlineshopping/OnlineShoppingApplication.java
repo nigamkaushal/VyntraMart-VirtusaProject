@@ -8,7 +8,8 @@ import com.virtusa.onlineshopping.cartPackage.CartRepo;
 import com.virtusa.onlineshopping.productPackage.productRepo;
 import com.virtusa.onlineshopping.userPackage.UserRepo;
 
-@EnableJpaRepositories(basePackageClasses = {UserRepo.class, productRepo.class, CartRepo.class})
+@EnableJpaRepositories(basePackageClasses = {UserRepo.class, productRepo.class,
+		CartRepo.class,})
 @SpringBootApplication
 public class OnlineShoppingApplication {
 

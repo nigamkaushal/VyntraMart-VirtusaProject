@@ -1,4 +1,4 @@
-package com.virtusa.onlineshopping.productPackage;
+package com.virtusa.onlineshopping.controllerPackage;
 
 import java.security.Principal;
 
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.virtusa.onlineshopping.cartPackage.CartService;
+import com.virtusa.onlineshopping.productPackage.productService;
 
 
 @RestController
