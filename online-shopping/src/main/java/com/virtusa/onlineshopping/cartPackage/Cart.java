@@ -13,11 +13,11 @@ public class Cart implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@EmbeddedId
-	private cartId cartid;
+	private CartId cartid;
 
 	public Cart() {}
 
-	public Cart(cartId cartid) {
+	public Cart(CartId cartid) {
 		super();
 		this.cartid = cartid;
 	}
@@ -47,12 +47,8 @@ public class Cart implements Serializable {
 		return true;
 	}
 
-	public cartId getCartid() {
+	public CartId getCartid() {
 		return cartid;
-	}
-
-	public void setCartid(cartId cartid) {
-		this.cartid = cartid;
 	}
 
 	@Override

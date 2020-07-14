@@ -1,4 +1,4 @@
-package com.virtusa.onlineshopping.cartPackage;
+package com.virtusa.onlineshopping.orderPackage;
 
 import java.io.Serializable;
 
@@ -6,24 +6,24 @@ import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class cartId implements Serializable{
+public class OrderId implements Serializable{
 	
-	private static final long serialVersionUID = -6690808024007215310L;
+	private static final long serialVersionUID = 1L;
 
 	@Column(name = "product_id" )
 	private String product_Id;
 	
 	@Column(name = "customer_email")
 	private String customer_Email;
-	
-	public cartId() {}
 
-	public cartId(String product_id, String customer_email) {
-		super();
-		this.product_Id = product_id;
-		this.customer_Email = customer_email;
+	public String getProduct_Id() {
+		return product_Id;
 	}
-	
+
+	public String getCustomer_Email() {
+		return customer_Email;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -41,7 +41,7 @@ public class cartId implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		cartId other = (cartId) obj;
+		OrderId other = (OrderId) obj;
 		if (customer_Email == null) {
 			if (other.customer_Email != null)
 				return false;
@@ -55,20 +55,16 @@ public class cartId implements Serializable{
 		return true;
 	}
 
-	public String getProduct_Id() {
-		return product_Id;
+	public OrderId(String product_Id, String customer_Email) {
+		super();
+		this.product_Id = product_Id;
+		this.customer_Email = customer_Email;
 	}
+	
+	public OrderId() {}
 
-	public String getCustomer_Email() {
-		return customer_Email;
+	@Override
+	public String toString() {
+		return "OrderId [product_Id=" + product_Id + ", customer_Email=" + customer_Email + "]";
 	}
-
-	
-
-	
-	
-	
-	
-	
-	
 }

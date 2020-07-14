@@ -20,7 +20,7 @@ public class CartService {
 	private productService prodService;
 	
 	public void add_prodtoCart(String pid, Principal principal) {
-		Cart c = new Cart(new cartId(pid, principal.getName()));
+		Cart c = new Cart(new CartId(pid, principal.getName()));
 		cartRepo.save(c);
 	}
 	
@@ -39,6 +39,10 @@ public class CartService {
 		List<Product> products = new ArrayList<>();
 		prod_ids.forEach(p -> products.add(prodService.getProductByCode(p)));
 		return products;
+	}
+	
+	public void deleteProduct(Cart c) {
+		cartRepo.delete(c);
 	}
 
 }
