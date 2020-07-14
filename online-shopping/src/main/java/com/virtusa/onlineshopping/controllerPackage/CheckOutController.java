@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.virtusa.onlineshopping.orderPackage.OrderService;
+import com.virtusa.onlineshopping.orderPackage.OrderDetailsService;
 
 @RestController
 public class CheckOutController {
 	@Autowired
-	private OrderService orderService;
+	private OrderDetailsService orderDetailsService;
 	
 	@PostMapping(value="checkout", params={"proceed=Proceed To Checkout"})
 	public ModelAndView checkout(@RequestParam("pid") String pid,
@@ -24,7 +24,7 @@ public class CheckOutController {
 		String[] qtys = qty.split(",");
 		String[] prices = price.split(",");
 		for(int i=0;i<pids.length;i++) {
-			orderService.save_Order(pids[i],principal.getName(),qtys[i],prices[i]);
+			orderDetailsService.save_Order(pids[i],principal.getName(),qtys[i],prices[i]);
 		}
 		return new ModelAndView("checkout");
 	}

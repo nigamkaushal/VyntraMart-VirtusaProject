@@ -33,21 +33,6 @@ app.controller('myCtrl', function ($scope, $http){
 		   $scope.products={};
 	   });
 
-    /*
-	   $http({
-		    method: 'POST',
-		    url: '/check'
-		 }).then(function (response){
-			 if(response.data){
-				$scope.submit=submit;
-				
-				var submit=function(){
-					var product=$scope.product;  
-					$http.post(url, product);        
-					}
-			 }
-		 });
-	*/
 	});
 
 
@@ -100,10 +85,10 @@ app.controller('myCtrl', function ($scope, $http){
       </table>
       
     </div>
-    <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-      <input type="submit" name="proceed" value="Proceed To Checkout"
-      class="flex ml-auto text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded" />
-    </div>
+	    <div class="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
+	      <input type="submit" name="proceed" value="Proceed To Checkout"
+	      class="flex ml-auto text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded" />
+	    </div>
     </form>
   </div>
 </section>

@@ -1,4 +1,4 @@
-package com.virtusa.onlineshopping.controllerPackage;
+package com.virtusa.onlineshopping.cartPackage;
 
 import java.security.Principal;
 import java.util.List;
@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.virtusa.onlineshopping.cartPackage.Cart;
-import com.virtusa.onlineshopping.cartPackage.CartService;
-import com.virtusa.onlineshopping.cartPackage.CartId;
 import com.virtusa.onlineshopping.productPackage.Product;
 
 @RestController
@@ -32,7 +29,7 @@ public class CartController {
 	}
 	
 	
-	//BACHA Hua hai  prod1,prod2,prod3
+	//BACHA Hua hai  prod1,prod2,prod3 NOT WORKING
 	@RequestMapping(value="checkout", params= {"delete=Delete"})
 	public ModelAndView deleteCart(@RequestParam("pid") String pid, Principal principal ) {
 		cartservice.deleteProduct(new Cart(new CartId(pid,principal.getName())));

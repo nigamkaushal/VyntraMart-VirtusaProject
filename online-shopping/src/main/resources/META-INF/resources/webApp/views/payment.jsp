@@ -17,7 +17,7 @@
 		}
 	</style>
 </head>
-<body ng-app="">
+<body ng-app="myApp">
 	
 	<header ng-include="'../header'">                    
 	</header>
@@ -25,7 +25,7 @@
 	<section class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
 	    <div class="bg-grey-lighter min-h-screen flex flex-col">
             <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-10">
-                <form action="#" method="post" id="payment" >
+                <form action="../invoice" method="post" id="payment" name="myForm">
 	                <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
 	                    <h1 class="mb-6 text-2xl text-center">Payment</h1>
 	                    <select class="block border border-grey-light w-full p-3 rounded mb-4">
@@ -70,7 +70,7 @@
 	                    <button
 	                        type="submit"
 	                        name="sign"
-	                        value="Sign" 
+	                        value="Sign" ng-disabled="myForm.$invalid"
 	                        class="flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg"
 	                    >Order Now</button>
 	

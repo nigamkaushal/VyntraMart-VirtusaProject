@@ -63,6 +63,12 @@ public class CartId implements Serializable{
 		return customer_Email;
 	}
 
+	@Override
+	public String toString() {
+		return "CartId [product_Id=" + product_Id + ", customer_Email=" + customer_Email + "]";
+	}
+
+	
 	
 
 	
