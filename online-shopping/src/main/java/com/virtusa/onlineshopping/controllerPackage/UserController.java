@@ -8,7 +8,6 @@ import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.virtusa.onlineshopping.userPackage.UserRepo;
 import com.virtusa.onlineshopping.userPackage.Users;
@@ -18,11 +17,6 @@ public class UserController {
 	
 	@Autowired
 	private UserRepo userRepo;
-	
-	@GetMapping(value="manage_products")
-	public ModelAndView manageProduct() {
-		return new ModelAndView("manage_products");
-	}
 	
 	@GetMapping(value="get_userinfo", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Map<String,String> get_user(Authentication authentication) {

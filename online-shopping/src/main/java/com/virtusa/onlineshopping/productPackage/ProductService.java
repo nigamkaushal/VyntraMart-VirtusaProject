@@ -21,5 +21,14 @@ public class ProductService {
 	public Product getProductByCode(String product_id){
 		return repo.findById(product_id).get();
 	}
-
+		
+	public void addProduct(Product prod) {
+		repo.save(prod);
+	}
+	public void updateProduct(Product prod) {
+		repo.save(prod);
+	}
+	public void deleteProduct(String prod_id) {
+		repo.deleteById(prod_id);
+	}
 }
