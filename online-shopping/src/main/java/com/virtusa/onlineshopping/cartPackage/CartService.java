@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.virtusa.onlineshopping.productPackage.Product;
-import com.virtusa.onlineshopping.productPackage.productService;
+import com.virtusa.onlineshopping.productPackage.ProductService;
 
 @Service
 public class CartService {
@@ -17,7 +17,7 @@ public class CartService {
 	private CartRepo cartRepo;
 	
 	@Autowired 
-	private productService prodService;
+	private ProductService prodService;
 	
 	public void add_prodtoCart(String pid, Principal principal) {
 		Cart c = new Cart(new CartId(pid, principal.getName()));
@@ -28,8 +28,8 @@ public class CartService {
 		List<Cart> cart = cartRepo.findAll();
 		List<String> prod_ids = new ArrayList<>();
 		for (Cart c : cart) {
-			if(c.getCartid().getCustomer_Email().equals(email))
-				prod_ids.add(c.getCartid().getProduct_Id());
+			if(c.getCartid().getCustomer_email().equals(email))
+				prod_ids.add(c.getCartid().getProduct_id());
 		}
 		return prod_ids;
 	}

@@ -1,11 +1,11 @@
 package com.virtusa.onlineshopping.controllerPackage;
 
-import java.security.Principal;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -25,13 +25,18 @@ public class UserController {
 	}
 	
 	@GetMapping(value="get_userinfo", produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<String> get_user(Principal principal) {
-		List<String> list = new ArrayList<>();
-		String email = principal.getName();
+	public Map<String,String> get_user(Authentication authentication) {
+		Map<String,String> map = new HashMap<>();
+		if(authentication==null){
+			map.put("fullname", "empty");
+			map.put("role", "null");
+			return map;
+		}
+		String email = authentication.getName();
 		Users u = userRepo.findByEmail(email).get();
-		list.add(u.getFullname());
-		list.add(u.getRoles());
-		return list;
+		map.put("fullname", u.getFullname());
+		map.put("role", u.getRoles());
+		return map;
 	}
 	
 }

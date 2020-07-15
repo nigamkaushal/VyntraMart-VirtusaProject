@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.virtusa.onlineshopping.cartPackage.CartService;
-import com.virtusa.onlineshopping.productPackage.productService;
+import com.virtusa.onlineshopping.productPackage.ProductService;
 
 
 @RestController
@@ -19,7 +19,7 @@ public class productController {
 	private ModelAndView mv;
 	
 	@Autowired
-	private productService proService;
+	private ProductService proService;
 	
 	@Autowired
 	private CartService cartService;

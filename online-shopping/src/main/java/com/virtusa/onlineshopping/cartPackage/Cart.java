@@ -53,8 +53,8 @@ public class Cart implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Cart [Customer_Email=" + cartid.getCustomer_Email() + ","
-				+ "Product_id=" + cartid.getProduct_Id() + "]";
+		return "Cart [Customer_Email=" + cartid.getCustomer_email() + ","
+				+ "Product_id=" + cartid.getProduct_id() + "]";
 	}
 	
 	

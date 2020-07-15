@@ -4,10 +4,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-		rel="stylesheet">
 	<title>VyntraMart - About Us</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js">
+	<script src="../angular.min.js">
 	</script>
 </head>
 <body ng-app="">

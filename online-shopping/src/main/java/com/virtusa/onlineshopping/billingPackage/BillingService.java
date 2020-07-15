@@ -12,5 +12,8 @@ public class BillingService {
 	public void saveBilling(Billing b) {
 		billingRepo.save(b);
 	}
+	public Billing getBilling(String email) {
+		return billingRepo.findByEmail(email).get();
+	}
 
 }

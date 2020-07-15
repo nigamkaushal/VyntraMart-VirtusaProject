@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class productService {
+public class ProductService {
 	
 	@Autowired
-	private productRepo repo;
+	private ProductRepo repo;
 	
 	public List<Product> getAllProducts(){
 		List<Product> pro = new ArrayList<>();

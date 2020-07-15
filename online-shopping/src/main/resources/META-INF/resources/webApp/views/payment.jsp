@@ -4,10 +4,10 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-	rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js">
+	<script src="../angular.min.js">
 	</script>
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+	rel="stylesheet">
 	<title>Payment Page</title>
 	<style>
 		#payment
@@ -18,7 +18,7 @@
 	</style>
 </head>
 <body ng-app="myApp">
-	
+
 	<header ng-include="'../header'">                    
 	</header>
 	
