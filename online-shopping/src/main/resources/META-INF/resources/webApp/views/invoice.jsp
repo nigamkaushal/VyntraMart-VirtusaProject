@@ -10,13 +10,27 @@
     <meta charset="UTF-8">
     <title>VyntraMart - Invoice</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
-</head>
-<body ng-app="">
 
-	<header ng-include="'../header'">                    
+	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+	rel="stylesheet">
+</head>
+<header>
+<body ng-app="">
+<div  class="text-gray-700 body-font">
+	 <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" ng-init="flag=true">
+	    <a href="../home" class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+	      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-orange-500 rounded-full" viewBox="0 0 24 24">
+	        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+	      </svg>
+	      <span class="ml-3 text-xl">VyntraMart</span>
+	    </a >
+	</div>
+	 
+</div>            
 	</header>
 	
 	    <div class="container">
+	   <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Invoice</h1>
         <div class="card">
             
             <div class="card-body">
@@ -90,9 +104,9 @@
             </div>
         </div>
     </div>
-    
-    <footer ng-include="'../footer'">                    
-	</footer>
-    
+            <form action="../home" method="post">
+            <input type="submit" value="Continue Shopping" class="flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg"/>
+	
+    	    </form>
 </body>
 </html>
